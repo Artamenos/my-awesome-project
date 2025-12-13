@@ -4,51 +4,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Avion</title>
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <div>
-            <h1>МойСайт</h1>
+            <img src="assets/icons/Search.png" alt="">
+            <img src="assets/img/Лого.png" alt="">
+            <img src="assets/icons/Shopping--cart.png" alt="">
+            <img src="assets/icons/User--avatar.png" alt="">
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#plantpots">Горшки</a></li>
+                <li><a href="#ceramics">Керамика</a></li>
+                <li><a href="#tables">Столы</a></li>
+                <li><a href="#chairs">Стулья</a></li>
+                <li><a href="#crockery">Посуда</a></li>
+                <li><a href="#tableware ">Предметы сервировки</a></li>
+                <li><a href="#cutlery">Столовые приборы</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="home">
-            <h2>Добро пожаловать!</h2>
-            <p>Это главная страница нашего веб-приложения.</p>
+        <section id="about">
+            <h2>Мебельный бренд<br />будущего с&nbsp;неподвластным времени дизайном</h2>
+            <a href="#collection" class="hero_button">Посмотреть коллекцию</a>
+            <p>Наступает новая эра экологичной мебели от Avelon — французского luxury-бренда, который говорит на языке эстетики. Утончённые шрифты, безупречная палитра и цифровое представление продукции с помощью передовых веб-технологий — всё это создаёт уникальный опыт.</p>
+            <img src="assets/img/Right Image.png" alt="">
+        </section>
+        <section id="different">
+            <h2>Что делает наш бренд уникальным</h2>
+            <article class="feature-item">
+                <img src="assets/icons/Delivery.png" alt="">
+                <h3>Доставка на следующий день по умолчанию</h3>
+                <p>Закажите до 15:00, и ваш заказ будет доставлен на следующий день в стандартном режиме</p>
+            </article>
+            
+            <article class="feature-item">
+                <img src="assets/icons/Checkmark--outline.png" alt="">    
+                <h3>Создано настоящими мастерами</h3>
+                <p>Изделия ручной работы, созданные с истинной страстью и мастерством</p>
+            </article>
+            
+            <article class="feature-item">
+                <img src="assets/icons/Purchase.png" alt="">
+                <h3>Непревзойдённые цены</h3>
+                <p>Для наших материалов и качества вы не найдёте цен лучше нигде</p>
+            </article>
+            
+            <article class="feature-item">
+                <img src="assets/icons/Sprout.png" alt="">
+                <h3>Переработанная упаковка</h3>
+                <p>Мы используем 100% переработанную упаковку, чтобы минимизировать наш экологический след</p>
+            </article>
+        </section>
+        <section id="new_collection">
+            <h2>Новинки керамика</h2>
+            <article class="product-card">
+                <img src="assets/img/Photo.png" alt="">
+                <a href="#001" class="collection-link"><h3>Кресло Dandy</h3></a>
+                <p class="price">30 000 ₽</p>
+            </article>
+            
+            <article class="product-card">
+                <img src="assets/img/Photo (1).png" alt="">
+                <a href="#002" class="collection-link"><h3>Набор ваз Rustto</h3></a>
+                <p class="price">18 600 ₽</p>
+            </article>
+            
+            <article class="product-card">
+                <img src="assets/img/Photo (2).png" alt="">
+                <a href="#003" class="collection-link"><h3>Шёлковая ваза</h3></a>
+                <p class="price">15 000 ₽</p>
+            </article>
+            
+            <article class="product-card">
+                <img src="assets/img/Photo (3).png" alt="">
+                <a href="#004" class="collection-link"><h3>Лампа Lucy</h3></a>
+                <p class="price">47 880 ₽</p>
+            </article>
+            
+            <a href="/collection" class="collection-link">Смотреть коллекцию</a>
+        </section>
+        <section id="popular_products">
+            <h2>Новинки керамика</h2>
+            <article class="product-card">
+                <img src="assets/img/Large.png" alt="">
+                <a href="#001" class="collection-link"><h3>Кресло Dandy</h3></a>
+                <p class="price">117 600 ₽</p>
+            </article>
+            
+            <article class="product-card">
+                <img src="assets/img/Photo.png" alt="">
+                <a href="#002" class="collection-link"><h3>Набор ваз Rustto</h3></a>
+                <p class="price">30 000 ₽</p>
+            </article>
+            
+            <article class="product-card">
+                <img src="assets/img/Photo (3).png" alt="">
+                <a href="#003" class="collection-link"><h3>Шёлковая ваза</h3></a>
+                <p class="price">30 000 ₽</p>
+            </article>
+            
+            <a href="/collection" class="collection-link">Смотреть коллекцию</a>
+        </section>
+        <section class="form_subscribe">
+            <h2>Получайте лучшие предложения первыми</h2>
+            <p>Эксклюзивные скидки, новые поступления и специальные мероприятия</p>
+            
+            <form class="simple-subscribe">
+                <input type="email" placeholder="Ваш email" aria-label="Адрес электронной почты"required>
+                <button type="submit"><span>Подписаться</span></button>
+            </form>
+            <p class="subscribe-note">Нажимая "Подписаться", вы соглашаетесь с нашей Политикой конфиденциальности</p>
         </section>
         <section id="about">
-            <h2>О нас</h2>
-            <p>Мы компания, которая занимается созданием качественных веб-решений.
-            </p>
-        </section>
-        <section id="services">
-            <h2>Наши услуги</h2>
-            <ul>
-                <li>Веб-разработка</li>
-                <li>Дизайн</li>
-                <li>Консультации</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Контакты</h2>
-            <p>Email: artamenos@yandex.ru</p>
-            <p>Телефон: +7 (915) 397-55-84</p>
+            <h2>Мебельный бренд будущего с неподвластным времени дизайном</h2>
+            <p>Когда мы&nbsp;основали Avion, наша идея была проста: сделать высококачественную мебель доступной и&nbsp;демократичной.</p>
+<p>Ручная работа, с&nbsp;любовью созданная мебель и&nbsp;предметы интерьера&nbsp;&mdash; это наша жизнь, наше дыхание и&nbsp;наше искусство. Наш бутик в&nbsp;Челси стал творческим центром лондонского дизайнерского сообщества.</p>
+            <a href="#collection" class="hero_button">Связаться с нами</a>
+            <img src="assets/img/Image.png" alt="">
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Сайт. Все права защищены.</p>
-    </footer>
+    <footer class="footer">
+        <nav class="footer__nav">
+    
+            <section class="footer__section">
+                <h3 class="footer__title">Меню</h3>
+                <ul class="footer__list">
+                    <li><a href="#">Новые поступления</a></li>
+                    <li><a href="#">Бестселлеры</a></li>
+                    <li><a href="#">Недавно просмотренные</a></li>
+                    <li><a href="#">Популярные на этой неделе</a></li>
+                    <li><a href="#">Все товары</a></li>
+                </ul>
+            </section>
+            
+            <section class="footer__section">
+                <h3 class="footer__title">Категории</h3>
+                <ul class="footer__list">
+                    <li><a href="#">Посуда</a></li>
+                    <li><a href="#">Мебель</a></li>
+                    <li><a href="#">Домашний текстиль</a></li>
+                    <li><a href="#">Растения и кашпо</a></li>
+                    <li><a href="#">Стулья</a></li>
+                    <li><a href="#">Посуда</a></li>
+                </ul>
+            </section>
+            
+            <section class="footer__section">
+                <h3 class="footer__title">Наша компания</h3>
+                <ul class="footer__list">
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Конфиденциальность</a></li>
+                    <li><a href="#">Условия возврата</a></li>
+                </ul>
+            </section>
+            
+            <section class="footer__section">
+                <h3 class="footer__title">Подпишитесь на рассылку</h3>
+                <form class="footer__form">
+                    <label for="email" class="visually-hidden">Ваш email</label>
+                    <input type="email" id="email" placeholder="ваш@email.com" required>
+                    <button type="submit">Подписаться</button>
+                </form>
+            </section>
+            
+        </nav>
+        
+        <p class="footer__copyright">© 2025 Artamenos</p>
+        </footer>
 </body>
 
 </html>
