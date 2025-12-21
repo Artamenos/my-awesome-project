@@ -1,0 +1,72 @@
+.different {
+    padding: 120px 200px;
+    text-align: center;
+}
+
+.different h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 80px;
+    color: #1A1A1A;
+}
+
+.different__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.feature-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #2a254b;
+}
+
+.feature-item p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #2a254b;
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .different {
+        padding: 80px 40px;
+    }
+    
+    .different__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .different {
+        padding: 60px 20px;
+    }
+    
+    .different__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .different h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+}

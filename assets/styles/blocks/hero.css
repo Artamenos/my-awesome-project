@@ -1,0 +1,48 @@
+.hero {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    padding: 120px 200px;
+    align-items: stretch;
+}
+
+.hero__content {
+    display: grid;
+    align-content: space-between;
+    background-color: #2a254b;
+    padding: 60px;
+    color: #FFFFFF;
+}
+
+.hero__title {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: white;
+    margin: 0;
+}
+
+.hero__button {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: #484464;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+.hero__button:hover {
+    background-color: #000000;
+}
+
+.hero__description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #FFFFFF;
+    margin: 0;
+}
