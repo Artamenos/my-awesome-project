@@ -25,6 +25,9 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 ol, ul {
@@ -109,4 +112,18 @@ a {
 
 a:hover {
     text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Гарантируем, что все изображения не выходят за пределы */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }

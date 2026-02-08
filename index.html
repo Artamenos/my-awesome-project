@@ -15,55 +15,51 @@
     <link rel="stylesheet" href="assets/styles/blocks/form_subscribe.css">
     <link rel="stylesheet" href="assets/styles/blocks/about_2.css">
     <link rel="stylesheet" href="assets/styles/blocks/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <header class="header">
         <section class="header__top">
+            <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+            </button>
+
             <a href="#" class="header__link__1">
-                <img src="assets/icons/Search.png" alt="" class="header__icon">
+                <img src="assets/icons/Search.png" alt="Поиск" class="header__icon">
             </a>
+
             <a href="" class="header__logo">
-                <img src="assets/img/Лого.png" alt="" class="header__logo-image">
+                <img src="assets/img/Лого.png" alt="Avion" class="header__logo-image">
             </a>
-            <div class="header__link__2">
-                <a href="" class="header__link__2">
+
+            <div class="header__right">
+                <a href="#" class="header__link__2">
                     <img src="assets/icons/Shopping--cart.png" alt="Корзина" class="header__icon">
                 </a>
-                <a href="" class="header__link__3">
+                <a href="#" class="header__link__3">
                     <img src="assets/icons/User--avatar.png" alt="Личный кабинет" class="header__icon">
                 </a>
             </div>
         </section>
 
-        <nav class="header__nav">
+        <nav class="header__nav" id="mainNav">
             <ul class="header__menu">
-                <li class="header__menu-item">
-                    <a href="#plantpots" class="header__menu-link">Горшки</a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="#ceramics" class="header__menu-link">Керамика</a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="#tables" class="header__menu-link">Столы</a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="#chairs" class="header__menu-link">Стулья</a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="#crockery" class="header__menu-link">Посуда</a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="#tableware" class="header__menu-link">Предметы сервировки</a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="#cutlery" class="header__menu-link">Столовые приборы</a>
-                </li>
+                <li class="header__menu-item"><a href="#hero" class="header__menu-link">О нас</a></li>
+                <li class="header__menu-item"><a href="#different" class="header__menu-link">Уникальность</a></li>
+                <li class="header__menu-item"><a href="#new_collection" class="header__menu-link">Новые коллекции</a></li>
+                <li class="header__menu-item"><a href="#popular_products" class="header__menu-link">Популярные продукты</a></li>
+                <li class="header__menu-item"><a href="#form_subscribe" class="header__menu-link">Подписка</a></li>
+                <li class="header__menu-item"><a href="#about_2" class="header__menu-link">Бренд</a></li>
             </ul>
         </nav>
+        
+        <div class="nav-overlay" id="navOverlay"></div>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero" id="hero">
             <article class="hero__content">
                 <h1 class="hero__title">Мебельный бренд для будущего <br />с&nbsp;неподвластным времени дизайном</h1>
                 <a href="#collection" class="button button--primary hero__button">Смотреть коллекцию</a>
@@ -75,7 +71,7 @@
                 <img src="assets/img/RightImage.png" alt="">
             </article>
         </section>
-        <section class="different">
+        <section class="different" id="different">
             <h2>Что делает наш бренд уникальным</h2>
 
             <div class="different__grid">
@@ -137,7 +133,7 @@
                 <a href="" class="collection-link">Смотреть коллекцию</a>
             </section>    
         </section>
-        <section class="popular_products">
+        <section class="popular_products" id="popular_products">
             <h2>Наши популярные продукты</h2>
 
             <section class="popular_products__grid">
@@ -160,11 +156,11 @@
                 </article>
             </section>
 
-            <section class="new_collection__button">
+            <section class="new_collection__button" id="new_collection__button">
                 <a href="" class="collection-link">Смотреть коллекцию</a>
             </section> 
         </section>
-        <section class="form_subscribe">
+        <section class="form_subscribe" id="form_subscribe">
             <article class="form_subscribe__grid">
                 <h2>Получайте лучшие предложения первыми</h2>
                 <p>Эксклюзивные скидки, новые поступления и специальные мероприятия</p>
@@ -176,7 +172,7 @@
                 <p class="subscribe-note">Нажимая "Подписаться", вы соглашаетесь с нашей Политикой конфиденциальности</p>
             </article>
         </section>
-        <section class="about_2">
+        <section class="about_2" id="about_2">
             <article class="about_2__content">
                 <h2>Мебельный бренд будущего с неподвластным времени дизайном</h2>
                 <p>Когда мы&nbsp;основали Avion, наша идея была проста: сделать высококачественную мебель доступной
@@ -241,6 +237,12 @@
 
         <p class="footer__copyright">© 2025 Artamenos</p>
     </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/scripts/menu.js"></script>
 </body>
 
 </html>
