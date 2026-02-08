@@ -73,3 +73,41 @@
     color: white;
     border-color: #484464;
 }
+
+/* Планшеты (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .popular_products {
+        padding: 80px 40px;
+    }
+    
+    .popular_products__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Смартфоны (до 767px) */
+@media screen and (max-width: 767px) {
+    .popular_products {
+        padding: 40px 20px;
+    }
+    
+    .popular_products h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .popular_products__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-card img {
+        height: 250px;
+    }
+    
+    .collection-link {
+        padding: 12px 24px;
+        font-size: 15px;
+        width: 100%;
+        max-width: 300px;
+    }
+}

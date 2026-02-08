@@ -62,3 +62,48 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media screen and (max-width: 1024px) {
+    .about_2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .about_2__content {
+        padding: 60px 40px;
+        order: 2;
+    }
+    
+    .about_2__image {
+        order: 1;
+    }
+    
+    .about_2__image img {
+        height: 400px;
+    }
+}
+
+/* Смартфоны (до 767px) */
+@media screen and (max-width: 767px) {
+    .about_2__content {
+        padding: 40px 20px;
+    }
+    
+    .about_2__content h2 {
+        font-size: 24px;
+    }
+    
+    .about_2__content p {
+        font-size: 16px;
+    }
+    
+    .hero_button {
+        padding: 14px 28px;
+        font-size: 15px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .about_2__image img {
+        height: 300px;
+    }
+}

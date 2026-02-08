@@ -87,3 +87,36 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin: 0;
 }
+
+/* Планшеты (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .footer {
+        padding: 40px 40px 30px;
+    }
+    
+    .footer__nav {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Смартфоны (до 767px) */
+@media screen and (max-width: 767px) {
+    .footer {
+        padding: 30px 20px 20px;
+    }
+    
+    .footer__nav {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .footer__form {
+        flex-direction: column;
+    }
+    
+    .footer__form input,
+    .footer__form button {
+        width: 100%;
+    }
+}

@@ -46,3 +46,279 @@
     color: #4e4d93;
 }
 
+/* Планшеты (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .header__top {
+        margin: 0 20px;
+        padding: 10px 0;
+    }
+    
+    .header__nav {
+        padding: 15px 40px;
+    }
+    
+    .header__menu {
+        gap: 15px 30px;
+    }
+}
+
+/* Смартфоны (до 767px) */
+@media screen and (max-width: 767px) {
+    .header__top {
+        margin: 0 15px; /* Еще меньше отступы */
+        padding: 8px 0;
+    }
+    
+    .header__nav {
+        padding: 10px 15px;
+        overflow-x: auto; /* Горизонтальная прокрутка если меню не помещается */
+    }
+    
+    .header__menu {
+        justify-content: flex-start; /* Выравнивание влево */
+        flex-wrap: nowrap; /* Не переносить на новую строку */
+        gap: 15px;
+        padding: 5px 0;
+    }
+    
+    .header__menu-item {
+        white-space: nowrap; /* Текст в одну строку */
+    }
+    
+    .header__menu-link {
+        font-size: 14px;
+    }
+}
+
+
+/* ===== ГАМБУРГЕР-МЕНЮ ===== */
+
+/* Скрываем гамбургер на десктопе по умолчанию */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    padding: 12px 10px;
+    cursor: pointer;
+    z-index: 1002;
+    grid-column: 1;
+    justify-self: start;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle__line {
+    width: 100%;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:hover .menu-toggle__line {
+    background: #4e4d93;
+}
+
+/* Состояние открытого меню (крестик) */
+.menu-toggle.active .menu-toggle__line:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+    background: #333;
+}
+
+.menu-toggle.active .menu-toggle__line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .menu-toggle__line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+    background: #333;
+}
+
+/* ===== ВЫПАДАЮЩЕЕ МЕНЮ НА МОБИЛЬНЫХ ===== */
+
+/* На десктопе - обычное меню */
+@media screen and (min-width: 768px) {
+    .header__nav {
+        display: block !important; /* Всегда показываем на десктопе */
+    }
+    
+    .nav-overlay {
+        display: none !important; /* Скрываем оверлей */
+    }
+}
+
+/* На мобильных - выпадающее меню */
+@media screen and (max-width: 767px) {
+    /* Показываем гамбургер */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    /* Скрываем поиск слева на мобильных */
+    .header__link__1 {
+        display: none;
+    }
+    
+    /* Обновляем grid для header__top */
+    .header__top {
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        position: relative;
+        z-index: 1001;
+        background: white;
+    }
+    
+    .header__logo {
+        grid-column: 2;
+        justify-self: center;
+    }
+    
+    .header__right {
+        grid-column: 3;
+        display: flex;
+        gap: 15px;
+        justify-self: end;
+    }
+    
+    /* ===== ВЫПАДАЮЩЕЕ МЕНЮ ===== */
+    .header__nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 320px;
+        max-width: 85%;
+        height: 100vh;
+        background: white;
+        padding: 90px 25px 30px;
+        transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        overflow-y: auto;
+        box-shadow: 2px 0 20px rgba(0,0,0,0.15);
+        display: block !important;
+    }
+    
+    .header__nav.active {
+        left: 0;
+    }
+    
+    .header__menu {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+    
+    .header__menu-item {
+        width: 100%;
+    }
+    
+    .header__menu-link {
+        display: block;
+        padding: 18px 0;
+        font-size: 18px;
+        color: #333;
+        font-weight: 500;
+        border-bottom: 1px solid #eee;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .header__menu-link:hover {
+        background: #f8f9fa;
+        padding-left: 20px;
+        color: #4e4d93;
+    }
+    
+    /* ===== ОВЕРЛЕЙ ДЛЯ ЗАТЕМНЕНИЯ ===== */
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(2px);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* ===== КНОПКА "НАВЕРХ" С СТРЕЛКОЙ ===== */
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background: #4e4d93;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(78, 77, 147, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top:hover {
+    background: #3d3c7a;
+    transform: scale(1.1) translateY(0);
+    box-shadow: 0 6px 25px rgba(78, 77, 147, 0.5);
+}
+
+.scroll-top:active {
+    transform: scale(0.95) translateY(0);
+}
+
+/* Иконка стрелки */
+.scroll-top i {
+    transition: transform 0.3s ease;
+}
+
+.scroll-top:hover i {
+    transform: translateY(-2px);
+}
+
+/* Адаптивность для кнопки */
+@media screen and (max-width: 767px) {
+    .scroll-top {
+        width: 52px;
+        height: 52px;
+        bottom: 25px;
+        right: 25px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .scroll-top {
+        width: 48px;
+        height: 48px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 18px;
+    }
+}
